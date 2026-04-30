@@ -1,7 +1,11 @@
 #Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos digitos separados.
-número = input('Digite um número de 0 a 9999: ')
-print('O número {} decomposto é:'.format(número))
-print('Unidade: {}'.format(número[3]))
-print('Dezena: {}'.format(número[2]))
-print('Centena: {}'.format(número[1]))
-print('Milhar: {}'.format(número[0]))
+número = int(input('Informe um número: '))
+unidade = número // 1 % 10
+dezena = número // 10 % 10
+centena = número // 100 % 10
+milhar = número // 1000 % 10
+print('Analisando o número {}'.format(número))
+print('Unidade: {}'.format(unidade))
+print('Dezena: {}'.format(dezena))
+print('Centena: {}'.format(centena))
+print('Milhar: {}'.format(milhar))
