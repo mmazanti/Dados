@@ -1,20 +1,25 @@
-#Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
-#-À vista dinheiro/PIX: 10% DE DESCONTO
-#-À vista no cartão: 5% DE DESCONTO
-#-Em até 2x no cartão: PREÇO NORMAL
-#-3x ou mais no cartão: 20% DE JUROS
-preço = float(input('Qual o valor do produto? '))
-condição_pagamento = int(input('Qual a forma de pagamento? \n#1 à vista (dinheiro/PIX) \n#2 à vista no cartão \n#3 Parcelado 2x no cartão \n#4 Parcelado 3x ou mais no cartão \nDigite a opção escolhida: '))
-if condição_pagamento == 1:
-    preço_desconto = preço - (preço * 0.10)
-    print('Para pagamento à vista, o produto que custava R${:.2f} custará {:.2f}.'.format(preço, preço_desconto))
-elif condição_pagamento == 2:
-    preço_desconto = preço - (preço * 0.05)
-    print('Para pagamento à vista, o produto que custava R${:.2f} custará {:.2f}.'.format(preço, preço_desconto))
-elif condição_pagamento == 3:
-    print('Parcelado 2x no cartão o produto continuará custando R${:.2f}.'.format(preço))
-elif condição_pagamento == 4:
-    preço_juros = preço + (preço * 0.20)
-    print('Parcelado 3x ou mais no cartão o produto que custava R${:.2f} terá 20% de juros passando a custar R${:.2f}.'.format(preço, preço_juros))
+#Crie um programa que faça o computador jogar JOKENPÔ com você.
+import random
+jokenpô_lista = ["PEDRA", "PAPEL", "TESOURA"]
+jokenpô_cpu = random.choice(jokenpô_lista)
+jokenpô_usuário = str(input('Vamos jogar jokenpô? Escolha: PEDRA, PAPEL ou TESOURA?: ')).strip().upper()
+if jokenpô_cpu == 'PEDRA' and jokenpô_usuário == 'PEDRA':
+    print('{} empata com {}. Ninguém ganhou.'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'PEDRA' and jokenpô_usuário == 'PAPEL':
+    print('{} perde de {}. VOCÊ GANHOU!'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'PEDRA' and jokenpô_usuário == 'TESOURA':
+    print('{} ganha de {}. VOCÊ PERDEU!'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'PAPEL' and jokenpô_usuário == 'PAPEL':
+    print('{} empata com {}. Ninguém ganhou.'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'PAPEL' and jokenpô_usuário == 'TESOURA':
+    print('{} perde de {}. VOCÊ GANHOU!'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'PAPEL' and jokenpô_usuário == 'PEDRA':
+    print('{} ganha de {}. VOCÊ PERDEU!'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'TESOURA' and jokenpô_usuário == 'TESOURA':
+    print('{} empata com {}. Ninguém ganhou.'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'TESOURA' and jokenpô_usuário == 'PEDRA':
+    print('{} perde de {}. VOCÊ GANHOU!'.format(jokenpô_cpu, jokenpô_usuário))
+elif jokenpô_cpu == 'TESOURA' and jokenpô_usuário == 'PAPEL':
+    print('{} ganha de {}. VOCÊ PERDEU!'.format(jokenpô_cpu, jokenpô_usuário))
 else:
-    print('Selecione uma opção válida entre 1, 2, 3, 4.')
+    print('Escolha uma opção válida entre PEDRA, PAPEL e TESOURA.')
