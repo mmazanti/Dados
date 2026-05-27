@@ -3,8 +3,8 @@ from datetime import datetime
 ano_atual = datetime.now().year
 maior_idade = 0
 menor_idade = 0
-for c in range(0, 7):
-    ano_nascimento = int(input('Em que ano você nasceu? '))
+for pessoas in range(0, 7):
+    ano_nascimento = int(input('Em que ano a {}ª nasceu? '.format(pessoas)))
     idade = ano_atual - ano_nascimento
     if idade >= 21:
         maior_idade += 1
