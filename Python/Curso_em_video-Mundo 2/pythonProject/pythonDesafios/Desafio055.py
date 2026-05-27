@@ -6,13 +6,14 @@ soma_idade = 0
 maior_idade_homem = 0
 nome_homem_mais_velho = ""
 mulheres_sub20 = 0
-for pessoa in range(0, 4):
+for pessoa in range(1, 5):
+    print('----- {}ª PESSOA -----'.format(pessoa))
     nome = str(input('Digite o seu nome: ')).strip()
     idade = int(input('Digite a sua idade: '))
     sexo = str(input('Sexo [M/F]: ')).strip().upper()
     soma_idade += idade
     if sexo == 'M':
-        if maior_idade_homem == 0 or idade > maior_idade_homem:
+        if maior_idade_homem == 1 or idade > maior_idade_homem:
             maior_idade_homem = idade
             nome_homem_mais_velho = nome
     elif sexo == 'F' and idade < 20:
