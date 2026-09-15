@@ -13,6 +13,8 @@ while stop == 'S':
     print('-'*30)
     idade = int(input('Idade: '))
     sexo = input('Sexo: [M/F] ').upper().strip()
+    while sexo != 'M' and sexo != 'F':
+            sexo = input('Sexo: [M/F] ').upper().strip()
     if idade >= 18:
         maior_18 += 1
     if sexo == 'M':
@@ -20,6 +22,10 @@ while stop == 'S':
     if sexo == 'F' and idade < 20:
         mulheres += 1
     stop = input('Quer continuar? [S/N] ').upper().strip()
+    while stop != 'S' and stop != 'N':
+        stop = input('Quer continuar? [S/N] ').upper().strip()
+    if stop == 'N':
+        break
 print('='*5, 'FIM DO PROGRAMA', '='*5)
 print(f'Total de pessoas com mais de 18 anos: {maior_18}')
 print(f'Ao todo temos {homens} homens cadastrados.')
