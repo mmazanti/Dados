@@ -12,6 +12,7 @@ while True:
     while jogador_palpite not in 'PI':
         jogador_palpite = str(input('Par ou ìmpar? [P/I] ')).upper().strip()
     print(f'Você jogou {jogador_número} e o computador {computador}. Total de {total}.')
+    print('DEU PAR' if total % 2 == 0 else 'DEU IMPAR')
     if jogador_palpite == 'P':
         if total % 2 == 0:
             print('Você VENCEU!')
