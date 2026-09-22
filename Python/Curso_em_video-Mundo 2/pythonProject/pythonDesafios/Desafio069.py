@@ -5,10 +5,8 @@
 print('-'*30)
 print(' '*5, 'LOJA SUPER BARATÃO', ' '*5)
 print('-'*30)
-soma_compra = contador_acima1000 = preço = 0
-stop = 'S'
-total_produtos = 0
-while stop == 'S':
+total_produtos = soma_compra = contador_acima1000 = preço = 0
+while True:
     nome_produto = input('Nome do produto: ').upper().strip()
     preço = float(input('Preço: R$'))
     total_produtos += 1
