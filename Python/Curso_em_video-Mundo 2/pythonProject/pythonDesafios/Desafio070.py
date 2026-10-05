@@ -12,9 +12,13 @@ valor_saque = valor_saque % 20
 cédula_10 = valor_saque // 10
 valor_saque = valor_saque % 10
 cédula_1 = valor_saque // 1
-print(f'Total de {cédula_50} cédulas de R$50')
-print(f'Total de {cédula_20} cédulas de R$20')
-print(f'Total de {cédula_10} cédulas de R$10')
-print(f'Total de {cédula_1} cédulas de R$1')
+if cédula_50 > 0:
+    print(f'Total de {cédula_50} cédulas de R$50')
+if cédula_20 > 0:
+    print(f'Total de {cédula_20} cédulas de R$20')
+if cédula_10 > 0:
+    print(f'Total de {cédula_10} cédulas de R$10')
+if cédula_1 > 0:
+    print(f'Total de {cédula_1} cédulas de R$1')
 print('='*30)
 print('Volte sempre ao BANCO MASTER! Tenha um bom dia!')
